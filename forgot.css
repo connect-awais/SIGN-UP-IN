@@ -1,0 +1,110 @@
+ @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+ 
+ /* Similar styling as before or customize it further */
+ body {
+    background: url('images/img\ 3.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+
+h1{
+    font-family: "Playfair Display", serif;
+    font-size: 90px;
+    margin-top: -100px;
+    color: #f81683;
+}
+
+p{
+    font-family: "Playfair Display", serif;
+    font-size: 39px;
+    color: #f989bf;
+    font-weight: 700;
+}
+
+.message {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.input-box {
+    margin-top: 30px;
+    outline: none;
+}
+
+.input-box input {
+    padding: 20px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 45px;
+    background-color: #fd95c7;
+    margin: 10px;
+    border: 2px solid black;
+    outline: none;
+}
+
+
+input::placeholder{
+    color: black;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+}
+
+/* Default input style */
+input {
+    background-color: #fd95c7; /* Your desired background color */
+    color: #fff; /* Text color */
+    border: 2px solid black; /* Border color */
+  }
+  
+  /* Style for autofilled input */
+  input:-webkit-autofill {
+    background-color: #fd95c7 !important; /* Same background as the default */
+    color: #fff !important; /* Ensure text color is consistent */
+    border: 2px solid black !important; /* Border color */
+    box-shadow: 0 0 0px 1000px #fd95c7 inset !important; /* Remove autofill border effect */
+  }
+  
+  /* Firefox autofill style */
+  input:-moz-placeholder {
+    background-color: #fd95c7 !important;
+    color: #fff !important;
+  }
+  
+  input:-ms-input-placeholder {
+    background-color: #fd95c7 !important;
+    color: #fff !important;
+  }
+  
+
+button {
+    padding: 20px 40px;
+    background-color: #fd95c7;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 40px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: #f81683;
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+
+.input-box i{
+    color: black;
+    margin-left: -50px;
+}

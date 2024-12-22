@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Fun background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+
+.success-message {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.confetti {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: confetti 3s infinite linear;
+}
+
+@keyframes confetti {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+button{
+    width: 40%;
+    height: 65px;
+    background: #f96a46;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 55px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+button:hover{
+    background-color: orangered;
+    color: black;
+    border: 2px solid black;
+    transition: 0.3s ease-in-out;
+}

@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/img.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    user-select: none;
+}
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+    margin-top: 40px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px; /* Define the height of the input field */
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    height: 65px; /* Ensure the input box retains its height */
+    padding: 0 20px; /* Add horizontal padding */
+    line-height: 50px; /* Align text vertically */
+    box-sizing: border-box; /* Ensures padding is included in the height */
+}
+
+input:focus{
+    outline: 2px solid black;
+}
+
+
+.input-box input::placeholder {
+    color: white;
+    position: relative;
+    top: 10px; /* Move placeholder text down */
+    position: static; /* Ensure placeholder aligns naturally */
+    transform: none; /* Remove any manual offsets */
+}
+
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: 45px 0 15px;
+}
+
+.remember-forget label input{
+    accent-color: white;
+    margin-right: 3px;
+}
+
+.remember-forget a{
+    color: white;
+    text-decoration: none;
+}
+
+.remember-forget a:hover{
+    text-decoration: underline;
+    text-decoration-color: palevioletred;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 55px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 55px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.wrapper .btn:hover{
+    background-color: purple;
+    color: white;
+    border: 2px solid plum;
+    transition: 0.3s ease-in-out;
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+    text-decoration-color: palevioletred;
+}
+
+/* Hide the default checkbox */
+.remember-forget input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom checkbox style */
+.remember-forget label {
+    position: relative;
+    padding-left: 35px; /* Space for the custom checkbox */
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+/* Custom checkbox appearance */
+.remember-forget label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #333;
+    background-color: white;
+    border-radius: 15px; /* Rounded corners */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.remember-forget label:hover::before {
+    border-color: purple; /* Highlight border on hover */
+}
+
+/* Style when checkbox is checked */
+.remember-forget input[type="checkbox"]:checked + label::before {
+    background-color: rgb(227, 140, 227); /* Custom background when checked */
+    border-color: purple; /* Border color when checked */
+    transform: scale(1.1); /* Slight scale effect when checked */
+}
+
+/* Adding a checkmark */
+.remember-forget input[type="checkbox"]:checked + label::after {
+    content: '✔'; /* Checkmark */
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    font-size: 16px;
+    color: #333;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Style for unchecked checkbox */
+.remember-forget input[type="checkbox"]:not(:checked) + label::after {
+    opacity: 0; /* Hide checkmark when unchecked */
+}
+
+/* Focus effect */
+.remember-forget input[type="checkbox"]:focus + label::before {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.5); /* Glow effect on focus */
+}
+
+
+
+#error-message {
+    color: plum;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Make input field background transparent */
+input {
+    background-color: transparent !important; /* Transparent background */
+    color: #fff !important; /* Text color */
+    border: 1px solid #444;
+    padding: 10px;
+    font-size: 16px;
+    outline: none; /* Remove default outline */
+    width: 100%;
+}
+
+/* Chrome/Safari autofill styles */
+input:-webkit-autofill {
+    background-color: transparent !important; /* Ensure background remains transparent */
+    color: #fff !important; /* Ensure text color remains white */
+    border: 1px solid #444 !important; /* Ensure border remains consistent */
+    box-shadow: 0 0 0px 1000px transparent inset !important; /* Remove autofill shadow */
+}
+
+/* Remove background color completely on autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    background-color: transparent !important; /* Ensure transparent background */
+    color: #fff !important; /* Ensure text color remains consistent */
+    border: 1px solid #444 !important; /* Border consistency */
+}
+
+/* Firefox autofill styles */
+input:-moz-autofill {
+    background-color: transparent !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+}
+
+button {
+    width: 100%;
+    height: 55px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 55px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+button:hover{
+    background-color: purple;
+    color: white;
+    border: 2px solid plum;
+    transition: 0.3s ease-in-out;
+}
+
+.input-box i{
+    color: black;
+}
